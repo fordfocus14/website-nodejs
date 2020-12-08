@@ -1,0 +1,130 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title> Products: check our products online</title>
+</head>
+<body>
+  <div class="navbar">
+    <div id="header">
+        <p>
+          <span id="left"><img width="120px" height="50px" src="/images/index.png"/> </span>
+          <span id="middle"> PRODUCTS</span>
+           <span id="right">
+             <a class="active" href="/contact">Contact</a>
+             <a class="active" href="#" onclick="display()">View Basket</a>
+          </span>
+       </p>
+    </div>
+
+    <hr>
+
+          <a class="active" href="/">Select Product</a>
+          <a class="active" href="/checkout">Checkout</a>
+          <a class="active" href="/shipping">Shipping</a>
+          <!-- <a class="active" href="#">Payment</a>
+          <a class="active" href="#">Track</a> -->
+
+        <div id="right">
+          <div class="dropdown">
+            <button class="dropbtn">
+             <i class="fa fa-fw fa-user"></i>
+            </button>
+
+            <div class="dropdown-content">
+              <% if (user != "Guest") { %>
+                  <a href="/user/logout">Log out</a>
+            <%  } else { %>
+              <a href="/SignUp">Sign up</a>
+              <a href="/login">Login</a>
+          <%  } %>
+          </div>
+      </div>
+             <a href="/checkout"><i class="fa fa-fw fa-search"></i></a>
+            <a href="#">Welcome <%= user.toUpperCase()%>!!</a>
+          </div>
+  </div>
+
+<div>
+  <br>
+  <p><strong>Search an item</strong></p>
+  <div id="form-design">
+    <form class="example" action="/checkout">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<div>
+ <% if(value != "") { %>
+   <h1> <%=value %> </h1>
+<% } %>
+
+<div class="check-container">
+<% shoes.forEach(function(item, index){ %>
+  <div class="check-container">
+    <img src="/images/shoes/<%= item%>" alt="shoes" />
+    <button class="check-btn" onclick="basket(<%=index%>, 'Shoes')">BUY FOR $100</button>
+  </div>
+<%});%>
+</div>
+<br>
+
+
+  <div class="check-container">
+  <% clothes.forEach(function(item, index){ %>
+    <div class="check-container">
+      <img src="/images/clothes/<%= item%>" alt="clothes" />
+      <button class="check-btn" onclick="basket(<%=index%>, 'Clothes')">BUY FOR $40</button>
+    </div>
+  <%});%>
+</div>
+<br>
+
+<div class="check-container">
+<% bags.forEach(function(item, index){ %>
+  <div class="check-container">
+    <img src="/images/bags/<%= item%>" alt="bags" >
+    <button class="check-btn" onclick="basket(<%=index%>, 'Bags')">BUY FOR $60</button>
+  </div>
+<%});%>
+</div>
+</div>
+
+</div>
+
+<script>
+let which_bag = []
+let which_shoes = []
+let which_clothes = []
+let bags = 0
+let shoes = 0
+let clothes = 0
+
+function basket(number, products){
+    if(products == "Bags"){
+      bags = bags + 1;
+      which_bag.push(number)
+      alert( bags + "  Bags selected")
+    }else if (products == "Shoes"){
+      shoes = shoes + 1;
+      which_shoes.push(number)
+      alert( shoes + "  Shoes selected")
+    } else {
+      clothes = clothes + 1;
+      which_clothes.push(number)
+    alert( clothes + "  Clothes selected")
+    }
+  }
+
+  function display(){
+      total = bags * 60 + clothes * 40 + shoes *100
+      alert("Bags : " + bags + "\nShoes : " + shoes + "\nClothes : "+ clothes + "\n\n\n Price : $"+ total)
+  console.log(which_bag)
+  console.log(which_shoes)
+  console.log(which_clothes)
+
+  }
+</script>
+
+</body>
+</html>

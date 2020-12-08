@@ -1,0 +1,39 @@
+<div class="navbar">
+  <div id="header">
+      <p>
+        <span id="left"><img width="120px" height="50px" src="/images/index.png"/> </span>
+        <span id="middle"> PRODUCTS</span>
+         <span id="right">
+           <a class="active" href="/contact">Contact</a>
+           <!-- <a class="active" href="#">View Basket</a> -->
+        </span>
+     </p>
+  </div>
+
+  <hr>
+
+        <a class="active" href="/">Select Product</a>
+        <a class="active" href="/checkout">Checkout</a>
+        <a class="active" href="/shipping">Shipping</a>
+        <!-- <a class="active" href="#">Payment</a>
+        <a class="active" href="#">Track</a> -->
+
+      <div id="right">
+        <div class="dropdown">
+          <button class="dropbtn">
+           <i class="fa fa-fw fa-user"></i>
+          </button>
+
+          <div class="dropdown-content">
+            <% if (user != "Guest") { %>
+                <a href="/user/logout">Log out</a>
+          <%  } else { %>
+            <a href="/SignUp">Sign up</a>
+            <a href="/login">Login</a>
+        <%  } %>
+        </div>
+    </div>
+           <a href="/checkout"><i class="fa fa-fw fa-search"></i></a>
+          <a href="#">Welcome <%= user.toUpperCase()%>!!</a>
+        </div>
+</div>

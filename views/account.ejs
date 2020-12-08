@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> SIGN UP</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+</head>
+<body>
+  <%- include("./partials/partial.ejs") %>
+  <div class="container">
+    <form action="/user/account_processing" method="post">
+      <div class="form-design">
+        <h1>Create An account</h1>
+        <h2 style="color: red"> <%= error%> </h2>
+        <label for="username">Your Name</label><br>
+        <input type="text" placeholder="Enter Your Name" name="username" required><br>
+
+        <label for="email">Email</label><br>
+        <input type="text" placeholder="Enter Email" name="email" required><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" placeholder="Enter Password" name="password" required><br>
+
+        <label for="confirm">Confirm Password</label><br>
+        <input type="password" placeholder="Confirm Password" name="password" required><br>
+
+        <div class="">
+            <button type="submit" class="signup">Sign Up</button>
+        </div>
+
+        <hr>
+        <br>
+        <p> Already have an account? <a href="/login" ><span style="color: blue;">Sign In!</span></a></p>
+
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

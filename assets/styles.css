@@ -1,0 +1,239 @@
+#middle{
+  text-align: center;
+  padding-left: 40%;
+  color: white;
+}
+
+#left{
+text-align: left;
+float: left;
+}
+#right{
+text-align: right;
+float: right;
+}
+a{
+text-decoration: none;
+padding-left: 20px;
+}
+hr {
+border: 1px solid black;
+margin-bottom: 25px;
+}
+.navbar{
+margin-top: 0px;
+padding-top: 2px;
+background-color: #B2BEB5;
+}
+input[type=text], input[type=password]{
+width: 80%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+border-radius: 20px;
+}
+input[type=text]:focus, input[type=password]:focus{
+border: 1px solid blue;
+}
+ textarea {
+   font-size: 16px;
+   font-family: Arial;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: block;
+   border: none;
+   background: #f1f1f1;
+ }
+
+ .contact-btn{
+   width: 84%;
+ }
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 80%;
+opacity: 0.8;
+border-radius: 10px;
+font-size: 20px;
+}
+
+.navbar {
+overflow: hidden;
+background-color: #333;
+font-family: Arial;
+}
+
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+
+.dropdown .dropbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color: blue;
+}
+
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+#container{
+margin-left: 50px;
+margin-right: 100px;
+}
+
+
+#information{
+  width:25%;
+  float:left;
+  height: 100%;
+
+}
+
+#images{
+  width: 75%
+  float:right;
+  height:100%;
+
+}
+
+.product-btn{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color:blue;
+  width: 150px;
+  border-radius: 30px;
+}
+.product-items, .product-title{
+  font-size: 15px;
+  font-weight:lighter;
+  font-family: serif;
+}
+
+.product-title{
+  font-size: 20px;
+  font-family: arial;
+}
+
+#product{
+  background-color: #ebecf0;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 80px;
+}
+
+.column{
+  flex: 10%;
+  padding: 0 4px;
+}
+
+.column img{
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.check-container input{
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 80px;
+  margin-right: 10px;
+}
+
+.check-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 2px;
+}
+#form-design button{
+  width: 180px;
+}
+
+.check-btn{
+  background-color: blue;
+}
+
+table td{
+  padding: 5px;
+}
+
+table tr{
+  padding: 5px;
+  font-size: 20px;
+}
+table, #processing_btn{
+  margin-left: 30%;
+}
+#processing_btn{
+  width: 200px;
+  background-color: #000
+}

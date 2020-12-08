@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title> SELL.COM </title>
+
+</head>
+<body>
+  <%- include("./partials/partial.ejs") %>
+<div id="product-container">
+<p style="text-align: center; font-size:24px;"> Shipping Information </p>
+<div style="text-align: center">
+<table >
+  <tr>
+    <td>From Country </td>
+    <td><%= information.source%></td>
+  </tr>
+  <tr>
+    <td>To Country</td>
+    <td><%= information.destination%></td>
+  </tr>
+  <tr>
+    <td>Source Address</td>
+    <td><%= information.address%></td>
+  </tr>
+  <tr>
+    <td>Destination Address</td>
+    <td><%= information.dest_address%></td>
+  </tr>
+  <tr>
+    <td>Cost of Transportation</td>
+    <td>$ <%=information.cost%></td>
+  </tr>
+  <tr>
+    <td>Card Number </td>
+    <td> <%=information.card%></td>
+  </tr>
+</table>
+</div>
+<br>
+<form action="/shipping/activation_payments/approved" method="post">
+<button id="processing_btn">Make Payment</button>
+</form>
+</div>
+</body>
+</html>

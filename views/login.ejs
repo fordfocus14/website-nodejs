@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title> LOG IN</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+
+
+</head>
+<body>
+    <%- include("./partials/partial.ejs") %>
+  <div class="container">
+    <form action="/login" method="post">
+      <div class="form-design">
+
+        <h1>Login</h1>
+      <h2 style="color: red"> <%= error%></h2>
+        <label for="username">Username</label><br>
+        <input type="text" placeholder="Enter Your Username" name="username" required><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

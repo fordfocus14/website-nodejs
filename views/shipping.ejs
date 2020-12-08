@@ -1,0 +1,43 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title> Products: check our products online</title>
+</head>
+<body>
+  <%- include("./partials/partial.ejs") %>
+  <div class="container">
+    <h2> Fill in Your Details</h2>
+    <form action="/shipping/activation_payments" method="post">
+      <div class="form-design">
+
+        <label for="country">Country (Source)</label><br>
+        <input type="text" placeholder="Enter your Country" name="source" required><br>
+
+        <label for="destination">Destination for Product (Country)</label><br>
+        <input type="text" placeholder="Country of destination" name="destination" required><br>
+
+        <label for="address">Your Home Address</label><br>
+        <input type="text" placeholder="Home address in case of emergency" name="address" required><br>
+
+        <label for="dest_address">Destination Address</label><br>
+        <input  type="text" placeholder="Destination address" name="dest_address" onfocus="add()"required><br>
+
+        <label for="cost">Cost $</label><br>
+        <input id="cost" type="text" placeholder="Cost of transportation" name=cost readonly /><br>
+
+        <label for="cost">Master or Visa Card Number</label><br>
+        <input type="text" placeholder="Card Number" name=card><br>
+        <div>
+            <button type="submit">CONFIRM</button>
+    </div>
+    <script>
+      function add(){
+          var number = Math.random() * 10 + 12 + 989;
+          document.querySelector('#cost').value =   Math.round(number);
+
+      }
+    </script>
+
+</body>
+</html>

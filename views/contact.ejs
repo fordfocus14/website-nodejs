@@ -1,0 +1,38 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+<body>
+  <%- include("./partials/partial.ejs") %>
+
+<h1 style="text-align: center">CONTACT US</h1>
+<hr>
+<div id="about-container">
+  <form action="/contact/information/success" method="post">
+    <div class="form-design">
+
+      <label for="username">Your Name</label><br>
+      <input type="text" placeholder="Enter Your Name" name="username" required><br>
+
+      <label for="email">Email</label><br>
+      <input type="text" placeholder="Enter Email" name="email" required><br>
+
+      <label for="number">Message</label><br>
+      <textarea placeholder="Enter Your Message" cols="100%" width="80%"
+      draggable="false"  name="message" required>
+      </textarea><br>
+
+
+      <div class="">
+          <button type="submit" class="contact-btn">Send Message</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>
+</ul>
+</body>
+</html>

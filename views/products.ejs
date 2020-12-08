@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <title> SELL.COM </title>
+
+</head>
+<body>
+  <%- include("./partials/partial.ejs") %>
+<div id="product-container">
+<div id="information">
+  <% products.forEach(function(item){%>
+  <div id="product">
+    <p class="product-title"> <%= item %> </p>
+    <p class="product-items">
+      Check out our amazing products!!<br>
+      Click on the explore to check the lastest <%= item%> in store<br>
+      <button class="product-btn"><a style="color:white" href="/checkout?search=<%=item.toLowerCase()%>">Explore</a> <i class="fa fa-arrow-right"></i></button>
+      </div>
+  <%});%>
+</div>
+<div id="images">
+
+  <div class="row">
+  <% clothes.forEach(function(item){ %>
+    <div class="column">
+      <img src="/images/clothes/<%= item%>" alt="clothes" >
+    </div>
+  <%});%>
+</div>
+<br>
+<div class="row">
+<% shoes.forEach(function(item){ %>
+  <div class="column">
+    <img src="/images/shoes/<%= item%>" alt="shoes" >
+  </div>
+<%});%>
+</div>
+<br>
+<div class="row">
+<% bags.forEach(function(item){ %>
+  <div class="column">
+    <img src="/images/bags/<%= item%>" alt="bags" >
+  </div>
+<%});%>
+</div>
+
+</div>
+</ul>
+</body>
+</html>
